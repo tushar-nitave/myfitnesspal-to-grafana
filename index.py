@@ -23,7 +23,7 @@ def getdata():
 
     username = request.form['text']
 
-    client = myfitnesspal.Client('vapivibes')
+    client = myfitnesspal.Client(username)
 
     with open("nurition_data.csv", "w") as file:
         file.write("Date\tCals\tCarbs\tFat\tProtein\tSodium\tSugar\t")

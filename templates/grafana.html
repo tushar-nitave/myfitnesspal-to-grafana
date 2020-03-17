@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/custom.css')}}">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
+        <style>
+            .container-fluid .row{
+                margin-top:30px;
+            }
+            #org{
+                text-align: left;
+                font-family: sans-serif;
+                font-weight: normal;
+                color:#000;
+            }
+            #org span{
+                font-weight: bold;
+                background: -webkit-linear-gradient(#D98B1B, #F9BA0E);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+
+            }
+            #dashboard{
+                text-align: center;
+                font-family: sans-serif;
+                font-weight: lighter;
+                color:#000;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <h4 id="org">Grafana <span>Labs</span></h4>
+                </div>
+                <div class="col">
+                    <h4 id="dashboard">Your Dashboard</h4>
+                </div>
+                <div class="col">
+        
+                </div>
+            </div>
+            <hr>
+            <iframe src="http://localhost:3000/dashboard/snapshot/mPBiBiWtf3qFSQomtYH6wvg3keTiZ54a" width="100%" height="820px frameborder="0"></iframe>
+        </div>
+    </body>
+</html>
+

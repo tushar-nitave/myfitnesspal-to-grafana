@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MyFitnessPal Data</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/custom.css')}}">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
+    </head>
+    <body>
+        
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md">
+                    <h4 id="org"><span>CCExtractor Development</span></h4>
+                    <h5 id="googl"style="color:#666">Google Summer of Code </h5>
+                </div>
+                <div class="col-md" style="border:1px dashed #fff">
+                    <h3 id="task">MyFitnessPal  <span>Grafana</span></h3>
+                </div>
+                <div class="col-md" style="border:1px dashed #fff">
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <h5 id="tag">You can export your MyFitnessPal data into csv format and then use the csv file to visualize in grafana dashboard</h5>
+                </div>
+                
+            </div>
+            <div class="row upload">
+
+                <div class="col-md"  align=center>
+                    <p id="retrieve">Retrieve data from myfitnesspal</p>
+                    <form action="/getdata" method="post">
+                        <input type="text" name="text" style="margin-top:100px" autocomplete="off" autofocus="off" placeholder="username"></input><br><br>
+                        <input type="submit" value="Get Data" style="margin-top:20px"></input>
+                      </form>
+                      <br>
+                      <p style="font-size: 14px;color:green">Status: {{status}}</p>
+                      <p style="font-size: 16px;color:#000">Generated File: <span style="font-weight: bold;">{{file}}</span></p>
+                </div>
+
+               <div class="col-md"  align=center>
+                   <p id="export">Export data to Grafana</p>
+                    <form action="/handleUpload", method="POST" enctype="multipart/form-data">
+                            <div class="file">
+                                <input type="file" name="file"/><br><br>
+                            </div>
+                            
+                            <input   type="submit" value="Upload Data"/>
+                    </form>
+                </div>
+            </div>
+            <footer>
+                <p style="font-size: 13px;padding-top: 10px;text-align: center;">Developed by Tushar Nitave - <a href="https://tushar-nitave.github.io/blog">https://tushar-nitave.github.io/blog</a></p>
+            </footer>
+        </div>
+       
+    </body>
+</html>
